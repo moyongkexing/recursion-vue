@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Button Customizer</title>
+</head>
+<body>
+  <div id="app" style="display: flex; flex-direction: column;">
+    <div style="margin: 20px;">
+      <input
+        type="button"
+        v-bind:disabled="disabled"
+        v-bind:style="styleObject"
+        v-bind:value="buttonText"
+      >
+    </div>
+    <div>
+      <label>文字色</label>
+      <input type="color" v-model="color">
+    </div>
+    <div>
+      <label>背景色</label>
+      <input type="color" v-model="backgroundColor">
+    </div>
+    <div>
+      <label>透明度</label>
+      <input type="range" v-model="opacity" min="0" max="1" step="0.1">
+      {{ opacity }}
+    </div>
+    <div>
+      <label>枠の丸み</label>
+      <input type="range" v-model="borderRadius" min="0" max="50" step="1">
+      {{ borderRadius }}
+    </div>
+    <div>
+      <label>文字サイズ</label>
+      <input type="range" v-model="fontSize" min="10" max="40" step="1">
+      {{ fontSize }}
+    </div>
+    <div>
+      <label>無効化</label>
+      <input type="checkbox" v-model="disabled">
+    </div>
+    <div>
+      <label>テキスト</label>
+      <input type="text" v-model="buttonText">
+    </div>
+  </div>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
