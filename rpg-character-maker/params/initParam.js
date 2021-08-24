@@ -1,4 +1,4 @@
-export const initialParam = {
+export const initParam = {
   strength: 10,
   agility: 10,
   resilience: 10,
